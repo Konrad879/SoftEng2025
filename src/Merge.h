@@ -18,7 +18,7 @@ private:
 template<class T, template<typename...> class Container>
 inline SortError Merge<T, Container>::sort(SortData<T, Container>& data) {
     if (data.size() == 0)
-        return SE_EMPTY;
+        return SE_SUCCESS;
 
     mergeSort(data, 0, data.size() - 1);
     return SE_SUCCESS;
